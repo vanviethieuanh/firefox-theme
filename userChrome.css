@@ -1,39 +1,15 @@
-/*====== Colour ======*/
+/*====== Color ======*/
 
-/* Puts a line at the top of the current active tab, feel free to edit the colour */
-#tabbrowser-tabs tab.tabbrowser-tab[selected="true"],
-#tabbrowser-tabs tab.tabbrowser-tab[multiselected="true"] {
-  border-top: 2px solid rgb(0, 116, 87) !important;
-}
-
-/* Sets active tab to black colour, you may want to edit this to be a more visible colour and commnet out the above chunk that puts a line on the active tab */
-tab[selected="true"] .tab-background {
-  background: black !important;
-}
-
-/* Sets tabs background to black*/
-
-#navigator-toolbox {
-  background-color: #000000 !important;
-  background-image: linear-gradient(
-    to top,
-    rgba(10, 31, 51, 0.35) 2px,
-    rgba(0, 0, 0, 0.05) 2px,
-    transparent 50%
-  ) !important;
-  border: none !important;
-}
-
-/* Sets toolbar to black */
+/* Sets toolbar to tab color */
 toolbar#nav-bar {
-  background: #000000 !important;
+  background: var(--identity-tab-color) !important;
   box-shadow: none !important;
   padding-bottom: 4px !important;
 }
 
-/* Sets the URL bar to black */
+/* Sets the URL bar to tab color */
 #urlbar-background {
-  background: black !important;
+  background: var(--identity-tab-color) !important;
   border: none !important;
 }
 
