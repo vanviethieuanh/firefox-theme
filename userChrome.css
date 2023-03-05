@@ -56,7 +56,7 @@ toolbar#nav-bar {
 }
 
 #back-button[disabled="true"] {
-    margin-left: -39px !important;
+    margin-left: -34px !important;
     opacity: 0 !important;
     transform: scale(0.8, 0.8) !important;
     pointer-events: none !important;
