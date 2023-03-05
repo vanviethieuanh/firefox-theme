@@ -1,4 +1,4 @@
-/*====== Color ======*/
+/*====== Colour ======*/
 
 /* Sets toolbar to tab color */
 toolbar#nav-bar {
@@ -16,7 +16,7 @@ toolbar#nav-bar {
 /*====== UI Settings ======*/
 
 :root {
-  --navbarWidth: 350px; /* Set width of navbar. Use vw for a percentage of your window, or px for a fixed width */
+  --navbarWidth: 400px; /* Set width of navbar. Use vw for a percentage of your window, or px for a fixed width */
   --animationSpeed: 0.5s;
 }
 
@@ -49,23 +49,30 @@ toolbar#nav-bar {
 
 /*====== Hiding buttons ======*/
 
-#back-button,  /* Backward history */
-#forward-button, /* Forward history */
-#tabs-newtab-button, /* New tab */
+/* autohide forward button */
+#back-button {
+    transform: scale(1, 1) !important;
+    transition: margin-left 150ms var(--animation-easing-function), opacity 250ms var(--animation-easing-function), transform 350ms var(--animation-easing-function) !important;
+}
+
+#back-button[disabled="true"] {
+    margin-left: -39px !important;
+    opacity: 0 !important;
+    transform: scale(0.8, 0.8) !important;
+    pointer-events: none !important;
+}
+
+#forward-button,
 #identity-box, /*site information */
 #tracking-protection-icon-container, /* "Shield" icon */
 #page-action-buttons,
-#urlbar-go-button /* Search URL magnifying glass */ {
+#urlbar-go-button, /* Search URL magnifying glass */
+#alltabs-button {
   display: none !important;
 }
 
 /* MIN MAX CLOSE Remove */
 .titlebar-buttonbox-container {
-  display: none !important;
-}
-
-/* Hide Tab Close buttons */
-.tabbrowser-tab .tab-close-button {
   display: none !important;
 }
 
