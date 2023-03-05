@@ -2,14 +2,14 @@
 
 /* Sets toolbar to tab color */
 toolbar#nav-bar {
-  background: var(--identity-tab-color) !important;
+  background: var(--toolbar-field-background-color) !important;
   box-shadow: none !important;
   padding-bottom: 4px !important;
 }
 
 /* Sets the URL bar to tab color */
 #urlbar-background {
-  background: var(--identity-tab-color) !important;
+  background: var(--toolbar-field-background-color) !important;
   border: none !important;
 }
 
