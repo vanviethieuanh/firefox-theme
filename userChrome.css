@@ -47,6 +47,7 @@ toolbar#nav-bar {
   height: 49px !important;
 }
 
+
 /*====== Hiding buttons ======*/
 
 /* autohide back button */
@@ -65,7 +66,6 @@ toolbar#nav-bar {
 #forward-button,
 #identity-box, /*site information */
 #tracking-protection-icon-container, /* "Shield" icon */
-#page-action-buttons,
 #urlbar-go-button, /* Search URL magnifying glass */
 #alltabs-button {
   display: none !important;
@@ -83,7 +83,8 @@ toolbar#nav-bar {
 }
 
 /* remove "padding" left and right from tabs */
-.titlebar-spacer {
+.titlebar-spacer
+{
   display: none !important;
 }
 
@@ -94,11 +95,8 @@ toolbar#nav-bar {
   margin-inline-start: 0 !important;
 }
 
-/* Element Hiding stuff */
-.urlbar-icon,
-#userContext-indicator,
-#userContext-label {
-  fill: transparent !important;
-  background: transparent !important;
-  color: transparent !important;
+/* Hide all icons in the url bar except for zoom level and bookmarks */
+#page-action-buttons > :not(#urlbar-zoom-button, #star-button-box) {
+    display: none !important; 
 }
+
