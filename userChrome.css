@@ -16,7 +16,7 @@ toolbar#nav-bar {
 /*====== UI Settings ======*/
 
 :root {
-  --navbarWidth: 400px; /* Set width of navbar. Use vw for a percentage of your window, or px for a fixed width */
+  --navbarWidth: 450px; /* Set width of navbar. Use vw for a percentage of your window, or px for a fixed width */
   --animationSpeed: 0.5s;
 }
 
@@ -49,7 +49,7 @@ toolbar#nav-bar {
 
 /*====== Hiding buttons ======*/
 
-/* autohide forward button */
+/* autohide back button */
 #back-button {
     transform: scale(1, 1) !important;
     transition: margin-left 150ms var(--animation-easing-function), opacity 250ms var(--animation-easing-function), transform 350ms var(--animation-easing-function) !important;
