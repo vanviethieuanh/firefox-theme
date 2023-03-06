@@ -16,7 +16,7 @@ toolbar#nav-bar {
 /*====== UI Settings ======*/
 
 :root {
-    --navbarWidth: 450px; /* Set width of navbar */
+    --navbarWidth: 475px; /* Set width of navbar */
 }
 
 /* If the window is wider than 1000px, use flex layout */
