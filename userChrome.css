@@ -1,56 +1,52 @@
-/*====== Colour ======*/
+/*====== Color ======*/
 
-/* Sets toolbar to tab color */
+/* Sets the toolbar color */
 toolbar#nav-bar {
-  background: var(--toolbar-field-background-color) !important;
-  box-shadow: none !important;
-  padding-bottom: 4px !important;
+    background: var(--toolbar-field-background-color) !important;
+    box-shadow: none !important;
+    padding-bottom: 4px !important;
 }
 
-/* Sets the URL bar to tab color */
+/* Sets the URL bar color */
 #urlbar-background {
-  background: var(--toolbar-field-background-color) !important;
-  border: none !important;
+    background: var(--toolbar-field-background-color) !important;
+    border: none !important;
 }
 
 /*====== UI Settings ======*/
 
 :root {
-  --navbarWidth: 450px; /* Set width of navbar. Use vw for a percentage of your window, or px for a fixed width */
-  --animationSpeed: 0.5s;
+    --navbarWidth: 450px; /* Set width of navbar */
 }
 
-#TabsToolbar {
-  margin-left: var(--navbarWidth) !important;
+/* If the window is wider than 1000px, use flex layout */
+@media (min-width: 1000px) {
+    #navigator-toolbox {
+        display: flex; flex-wrap: wrap;
+    }
+
+    /*  Url bar  */
+    #nav-bar {
+        order: 1;
+        width: var(--navbarWidth);
+    }
+
+    /* Tab bar */
+    #titlebar {
+        order: 2;
+        width: calc(100vw - var(--navbarWidth) - 1px);
+    }
+
+    /* Bookmarks bar */
+    #PersonalToolbar {
+        order: 3;
+        width: 100%;
+    }
 }
 
-#nav-bar {
-  margin-right: calc(100vw - var(--navbarWidth)) !important;
-}
+/*====== Simplifying interface ======*/
 
-#urlbar-container {
-  min-width: 0px !important;
-}
-
-:root[uidensity="compact"] #nav-bar {
-  margin-top: -37px !important;
-  height: 37px !important;
-}
-
-:root:not([uidensity="compact"]):not([uidensity="touch"]) #nav-bar {
-  margin-top: -44px !important;
-  height: 44px !important;
-}
-
-:root[uidensity="touch"] #nav-bar {
-  margin-top: -49px !important;
-  height: 49px !important;
-}
-
-
-/*====== Hiding buttons ======*/
-
-/* autohide back button */
+/* Autohide back button when disabled */
 #back-button {
     transform: scale(1, 1) !important;
     transition: margin-left 150ms var(--animation-easing-function), opacity 250ms var(--animation-easing-function), transform 350ms var(--animation-easing-function) !important;
@@ -63,41 +59,31 @@ toolbar#nav-bar {
     pointer-events: none !important;
 }
 
+/* Remove UI elements */
 #forward-button,
-#identity-box, /*site information */
-#tracking-protection-icon-container, /* "Shield" icon */
+#identity-box, /* Site information */
+#tracking-protection-icon-container, /* Shield icon */
+#page-action-buttons > :not(#urlbar-zoom-button, #star-button-box), /* All url bar icons except for zoom level and bookmarks */
 #urlbar-go-button, /* Search URL magnifying glass */
-#alltabs-button {
-  display: none !important;
+#alltabs-button, /* Menu to display all tabs at the end of tabs bar */
+.titlebar-buttonbox-container /* Minimize, maximize, and close buttons */ {
+    display: none !important;
 }
-
-/* MIN MAX CLOSE Remove */
-.titlebar-buttonbox-container {
-  display: none !important;
-}
-
-/*====== Simplifying interface ======*/
 
 #nav-bar {
-  box-shadow: none !important;
+    box-shadow: none !important;
 }
 
-/* remove "padding" left and right from tabs */
-.titlebar-spacer
-{
-  display: none !important;
+/* Remove "padding" left and right from tabs */
+.titlebar-spacer {
+    display: none !important;
 }
 
-/* remove gap after pinned tabs */
+/* Remove gap after pinned tabs */
 #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])
-  > #tabbrowser-arrowscrollbox
-  > .tabbrowser-tab[first-visible-unpinned-tab] {
-  margin-inline-start: 0 !important;
-}
-
-/* Hide all icons in the url bar except for zoom level and bookmarks */
-#page-action-buttons > :not(#urlbar-zoom-button, #star-button-box) {
-    display: none !important; 
+> #tabbrowser-arrowscrollbox
+> .tabbrowser-tab[first-visible-unpinned-tab] {
+    margin-inline-start: 0 !important;
 }
 
 /* Hide the hamburger menu */
