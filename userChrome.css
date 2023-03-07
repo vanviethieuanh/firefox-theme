@@ -1,7 +1,7 @@
 /* Base color for the theme, dependent on whether it's a light theme or not */
 @media (prefers-color-scheme: dark) {
     :root {
-        --lwt-accent-color: #1E2021 !important;
+        --lwt-accent-color: #1c1b22 !important;
     }
 }
 
@@ -108,6 +108,11 @@ toolbar#nav-bar {
     display: none !important;
 }
 
+/* Fix URL bar overlapping elements */
+#urlbar-container {
+    min-width: initial !important;
+}
+
 /* Remove gap after pinned tabs */
 #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])
 > #tabbrowser-arrowscrollbox
@@ -127,4 +132,6 @@ toolbar#nav-bar {
 #PanelUI-menu-button .toolbarbutton-badge-stack {
     padding: 0px !important; 
 }
+
+
 
