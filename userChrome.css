@@ -2,13 +2,17 @@
 
 /* Sets the toolbar color */
 toolbar#nav-bar {
-    background: var(--toolbar-field-background-color) !important;
+    background: inherit !important;
     box-shadow: none !important;
 }
 
 /* Sets the URL bar color */
+#urlbar {
+    background: inherit !important;
+}
+
 #urlbar-background {
-    background: var(--toolbar-field-background-color) !important;
+    background: var(--lwt-accent-color) !important;
     border: none !important;
 }
 
