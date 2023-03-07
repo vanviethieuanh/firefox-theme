@@ -4,7 +4,6 @@
 toolbar#nav-bar {
     background: var(--toolbar-field-background-color) !important;
     box-shadow: none !important;
-    padding-bottom: 4px !important;
 }
 
 /* Sets the URL bar color */
