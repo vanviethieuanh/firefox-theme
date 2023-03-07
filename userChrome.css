@@ -1,14 +1,35 @@
-/*====== Color ======*/
+/* Base color for the theme, dependent on whether it's a light theme or not */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --lwt-accent-color: #1E2021 !important;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --lwt-accent-color: #FAFAFC !important;
+    }
+}
+
+/*====== Aesthetics ======*/
+
+#navigator-toolbox {
+    border-bottom: none !important;
+}
+
+#titlebar {
+    background: var(--lwt-accent-color) !important;
+}
 
 /* Sets the toolbar color */
 toolbar#nav-bar {
-    background: inherit !important;
+    background: var(--lwt-accent-color) !important;
     box-shadow: none !important;
 }
 
 /* Sets the URL bar color */
 #urlbar {
-    background: inherit !important;
+    background: var(--lwt-accent-color) !important;
 }
 
 #urlbar-background {
@@ -16,8 +37,8 @@ toolbar#nav-bar {
     border: none !important;
 }
 
-#navigator-toolbox {
-    border-bottom: none !important;
+#urlbar-input-container {
+    border: none !important;
 }
 
 /*====== UI Settings ======*/
