@@ -12,6 +12,10 @@ toolbar#nav-bar {
     border: none !important;
 }
 
+#navigator-toolbox {
+    border-bottom: none !important;
+}
+
 /*====== UI Settings ======*/
 
 :root {
@@ -21,7 +25,8 @@ toolbar#nav-bar {
 /* If the window is wider than 1000px, use flex layout */
 @media (min-width: 1000px) {
     #navigator-toolbox {
-        display: flex; flex-wrap: wrap;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     /*  Url bar  */
