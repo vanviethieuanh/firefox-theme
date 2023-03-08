@@ -76,12 +76,12 @@ toolbar#nav-bar {
 /*====== Simplifying interface ======*/
 
 /* Autohide back button when disabled */
-#back-button {
+#back-button, #forward-button {
     transform: scale(1, 1) !important;
     transition: margin-left 150ms var(--animation-easing-function), opacity 250ms var(--animation-easing-function), transform 350ms var(--animation-easing-function) !important;
 }
 
-#back-button[disabled="true"] {
+#back-button[disabled="true"], #forward-button[disabled="true"] {
     margin-left: -34px !important;
     opacity: 0 !important;
     transform: scale(0.8, 0.8) !important;
@@ -89,7 +89,6 @@ toolbar#nav-bar {
 }
 
 /* Remove UI elements */
-#forward-button,
 #identity-box, /* Site information */
 #tracking-protection-icon-container, /* Shield icon */
 #page-action-buttons > :not(#urlbar-zoom-button, #star-button-box), /* All url bar icons except for zoom level and bookmarks */
