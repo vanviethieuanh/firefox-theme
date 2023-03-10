@@ -1,13 +1,13 @@
 /* Base color for the theme, dependent on whether it's a light theme or not */
 @media (prefers-color-scheme: dark) {
     :root {
-        --lwt-accent-color: #1c1b22 !important;
+        --lwt-accent-color: #1c1b22;
     }
 }
 
 @media (prefers-color-scheme: light) {
     :root {
-        --lwt-accent-color: #FAFAFC !important;
+        --lwt-accent-color: #FAFAFC;
     }
 }
 
@@ -70,6 +70,15 @@ toolbar#nav-bar {
     #PersonalToolbar {
         order: 3;
         width: 100%;
+    }
+    
+    /* Fix urlbar sometimes being misaligned */
+    :root[uidensity="compact"] #urlbar {
+        --urlbar-toolbar-height: 39.60px !important;
+    }
+
+    :root[uidensity="touch"] #urlbar {
+        --urlbar-toolbar-height: 49.00px !important;
     }
 }
 
