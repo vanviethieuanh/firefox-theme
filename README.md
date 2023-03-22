@@ -16,5 +16,7 @@ Enable the option `toolkit.legacyUserProfileCustomizations.stylesheets` from you
 
 Any theme and density should work, but the theme is meant to be used with Firefox's default Dark theme (not the System theme) and Compact density (enabled with the option `browser.compactmode.show` in `about:config`).
 
+If you want to watch a video explaining the installation process, [watch my video here](https://www.youtube.com/watch?v=0QVs1jVuA8c).
+
 ## Credits
 Based off [FirefoxCSS-Darknight](https://github.com/BriLHR/FirefoxCSS-Darknight) and [keyfox](https://github.com/AlfarexGuy2019/keyfox/), with additional lines from [Cascade](https://github.com/andreasgrafen/cascade).
