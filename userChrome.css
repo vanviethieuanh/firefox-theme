@@ -51,6 +51,7 @@ toolbar#nav-bar {
 @media (min-width: 1000px) {
     #navigator-toolbox {
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
     }
 
