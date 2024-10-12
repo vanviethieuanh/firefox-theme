@@ -132,3 +132,7 @@ toolbar#nav-bar {
     border-top: none !important;
     padding-right: 2rem !important;
 }
+
+#urlbar-input{
+    padding-left: 1rem !important;
+}
