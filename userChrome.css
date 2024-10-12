@@ -128,18 +128,7 @@ toolbar#nav-bar {
     margin-inline-start: 0 !important;
 }
 
-/* Hide the hamburger menu */
-#PanelUI-menu-button { 
-    padding: 0px !important;
+/* Hide toolbar top border */
+#nav-bar {
+    border-top: none !important;
 }
-
-#PanelUI-menu-button .toolbarbutton-icon { 
-    width: 1px !important; 
-}
-
-#PanelUI-menu-button .toolbarbutton-badge-stack {
-    padding: 0px !important; 
-}
-
-
-
