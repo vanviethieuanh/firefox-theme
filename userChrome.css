@@ -128,7 +128,7 @@ toolbar#nav-bar {
     margin-inline-start: 0 !important;
 }
 
-/* Hide toolbar top border */
 #nav-bar {
     border-top: none !important;
+    padding-right: 2rem !important;
 }
