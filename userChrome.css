@@ -1,1 +1,131 @@
-/home/accodius/.mozilla/firefox/alfagm0z.default-release/chrome/userChrome.css
+/* Base color for the theme, dependent on whether it's a light theme or not */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --accent-color: #1c1b22;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --accent-color: #FAFAFC;
+    }
+}
+
+/*====== Aesthetics ======*/
+
+#navigator-toolbox {
+    border-bottom: none !important;
+}
+
+#titlebar {
+    background: var(--accent-color) !important;
+}
+
+/* Sets the toolbar color */
+toolbar#nav-bar {
+    background: var(--accent-color) !important;
+    box-shadow: none !important;
+}
+
+/* Sets the URL bar color */
+#urlbar {
+    background: var(--accent-color) !important;
+}
+
+#urlbar-background {
+    background: var(--accent-color) !important;
+    border: none !important;
+}
+
+#urlbar-input-container {
+    border: none !important;
+}
+
+/*====== UI Settings ======*/
+
+:root {
+    --navbarWidth: 500px;
+    /* Set width of navbar */
+}
+
+/* If the window is wider than 1000px, use flex layout */
+@media (min-width: 1000px) {
+    #navigator-toolbox {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    /*  Url bar  */
+    #nav-bar {
+        order: 1;
+        width: var(--navbarWidth);
+    }
+
+    /* Tab bar */
+    #titlebar {
+        order: 2;
+        width: calc(100vw - var(--navbarWidth) - 1px);
+    }
+
+    /* Bookmarks bar */
+    #PersonalToolbar {
+        order: 3;
+        width: 100%;
+    }
+
+    /* Fix urlbar sometimes being misaligned */
+    :root[uidensity="compact"] #urlbar {
+        --urlbar-toolbar-height: 39.60px !important;
+    }
+
+    :root[uidensity="touch"] #urlbar {
+        --urlbar-toolbar-height: 49.00px !important;
+    }
+}
+
+/*====== Simplifying interface ======*/
+
+/* Autohide back button when disabled */
+#back-button,
+#forward-button {
+    display: none !important;
+}
+
+#back-button[disabled="true"],
+#forward-button[disabled="true"] {
+    margin-left: -34px !important;
+    opacity: 0 !important;
+    transform: scale(0.8, 0.8) !important;
+    pointer-events: none !important;
+}
+
+/* Remove "padding" left and right from tabs */
+.titlebar-spacer {
+    display: none !important;
+}
+
+/* Fix URL bar overlapping elements */
+#urlbar-container {
+    min-width: initial !important;
+}
+
+/* Remove gap after pinned tabs */
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])>#tabbrowser-arrowscrollbox>.tabbrowser-tab[first-visible-unpinned-tab] {
+    margin-inline-start: 0 !important;
+}
+
+#nav-bar {
+    box-shadow: none !important;
+    border-top: none !important;
+    order: -1;
+    padding-right: 2rem !important;
+}
+
+#toolbar-menubar {
+    display: none;
+}
+
+#urlbar-input {
+    padding-left: 1rem !important;
+}
